@@ -129,6 +129,16 @@ Build the renderer and package the desktop app for development inspection:
 ```bash
 npm run build
 ```
+## Screenshots
+
+### Quick collect from X
+<img src="screenshots/extension-hover-card.png" alt="Extension hover collect button" width="700" />
+
+### Desktop contact detail
+<img src="screenshots/desktop-contact-detail.png" alt="Desktop contact detail panel" width="700" />
+
+### Tag and status editing
+<img src="screenshots/tag-status-editor.png" alt="Tag and status editor" width="700" />
 
 Electron Builder is configured to output a macOS unpacked app directory target.
 
