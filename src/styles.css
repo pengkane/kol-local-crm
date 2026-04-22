@@ -1,0 +1,310 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(56, 139, 253, 0.15), transparent 32%),
+    linear-gradient(180deg, #0d1117 0%, #111827 100%);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid rgba(230, 237, 243, 0.08);
+  padding: 24px;
+  backdrop-filter: blur(20px);
+  background: rgba(13, 17, 23, 0.8);
+}
+
+.content {
+  padding: 24px;
+}
+
+.app-header,
+.panel-header,
+.filters-panel,
+.row-top,
+.row-sub,
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.app-header {
+  margin-bottom: 20px;
+}
+
+.app-header h1,
+.panel-header h2 {
+  margin: 0;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #7d8590;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+}
+
+.filters-panel {
+  align-items: stretch;
+  margin-bottom: 16px;
+}
+
+.filters-panel input,
+.filters-panel select,
+.contact-form input,
+.contact-form select,
+.contact-form textarea,
+.tag-list {
+  width: 100%;
+  border: 1px solid rgba(230, 237, 243, 0.12);
+  background: rgba(22, 27, 34, 0.85);
+  color: #e6edf3;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.search-input {
+  flex: 1.5;
+}
+
+.primary-button,
+.secondary-button {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 10px 14px;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #2f81f7, #1f6feb);
+  color: white;
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.04);
+  color: #e6edf3;
+  border-color: rgba(230, 237, 243, 0.12);
+}
+
+.list-panel,
+.detail-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: calc(100vh - 48px);
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+}
+
+.contact-row {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+  text-align: left;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(230, 237, 243, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  color: inherit;
+}
+
+.contact-row.selected {
+  border-color: rgba(47, 129, 247, 0.7);
+  background: rgba(47, 129, 247, 0.14);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-main {
+  min-width: 0;
+  flex: 1;
+}
+
+.row-sub {
+  color: #7d8590;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.row-tags,
+.tag-suggestions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.status-badge,
+.tag-chip {
+  border-radius: 999px;
+  border: 1px solid rgba(230, 237, 243, 0.12);
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #c9d1d9;
+}
+
+.tag-chip {
+  font-size: 12px;
+}
+
+.tag-chip.active {
+  background: rgba(47, 129, 247, 0.18);
+  border-color: rgba(47, 129, 247, 0.5);
+}
+
+.tag-chip.small {
+  padding: 4px 8px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  overflow: auto;
+  padding-right: 4px;
+  padding-bottom: 12px;
+  min-height: 0;
+  flex: 1;
+}
+
+.contact-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-form-grid label:nth-child(4),
+.contact-form-grid label:nth-child(6),
+.contact-form-grid label:nth-child(10),
+.tag-input-wrap,
+.form-actions,
+.duplicate-banner {
+  grid-column: 1 / -1;
+}
+
+.contact-form-grid textarea {
+  min-height: 84px;
+  resize: vertical;
+}
+
+.contact-form-grid label:nth-child(6) textarea,
+.contact-form-grid label:nth-child(10) textarea {
+  min-height: 96px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 44px;
+  align-items: center;
+}
+
+.tag-list input {
+  min-width: 120px;
+  flex: 1;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.tag-list input:focus {
+  outline: none;
+}
+
+.duplicate-banner,
+.error-banner,
+.loading-state,
+.empty-state {
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.form-actions {
+  position: sticky;
+  bottom: 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(230, 237, 243, 0.08);
+  background: linear-gradient(180deg, rgba(13, 17, 23, 0), rgba(13, 17, 23, 0.96) 20%, rgba(13, 17, 23, 0.98) 100%);
+}
+
+.duplicate-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(249, 196, 74, 0.12);
+  border: 1px solid rgba(249, 196, 74, 0.25);
+}
+
+.error-banner {
+  background: rgba(248, 81, 73, 0.15);
+  border: 1px solid rgba(248, 81, 73, 0.25);
+  margin-bottom: 12px;
+}
+
+.loading-state,
+.empty-state {
+  background: rgba(255, 255, 255, 0.04);
+  color: #8b949e;
+}
+
+@media (max-width: 1080px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .list-panel,
+  .detail-panel {
+    height: auto;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+}

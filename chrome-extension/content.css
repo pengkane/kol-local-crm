@@ -1,0 +1,103 @@
+.kol-collector-fab {
+  position: fixed;
+  z-index: 2147483647;
+  min-width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: #1d9bf0;
+  color: white;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+  font-weight: 700;
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+.kol-collector-fab:hover {
+  background: #1681c4;
+}
+
+.kol-collector-modal {
+  position: fixed;
+  z-index: 2147483647;
+  width: 340px;
+  max-width: calc(100vw - 24px);
+  background: rgba(15, 20, 25, 0.98);
+  color: #e7e9ea;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  padding: 14px;
+  font: 13px/1.4 Inter, system-ui, sans-serif;
+}
+
+.kol-collector-modal * {
+  box-sizing: border-box;
+}
+
+.kol-collector-modal form {
+  display: grid;
+  gap: 10px;
+}
+
+.kol-collector-modal input,
+.kol-collector-modal textarea,
+.kol-collector-modal select {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: inherit;
+  padding: 10px 12px;
+}
+
+.kol-collector-modal label {
+  display: grid;
+  gap: 6px;
+}
+
+.kol-collector-actions,
+.kol-collector-tags,
+.kol-collector-banner {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.kol-collector-tag {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: transparent;
+  color: inherit;
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.kol-collector-tag.active {
+  background: rgba(29, 155, 240, 0.18);
+  border-color: rgba(29, 155, 240, 0.4);
+}
+
+.kol-collector-banner {
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(249, 196, 74, 0.12);
+  border: 1px solid rgba(249, 196, 74, 0.25);
+}
+
+.kol-collector-actions button,
+.kol-collector-banner button {
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.kol-collector-save {
+  background: #1d9bf0;
+  color: white;
+}
+
+.kol-collector-cancel,
+.kol-collector-banner button {
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+}

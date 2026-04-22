@@ -1,0 +1,16 @@
+node_modules/
+dist/
+build/
+out/
+release/
+.DS_Store
+.env
+.env.local
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.crx
+*.pem
+.vscode/
+.idea/
